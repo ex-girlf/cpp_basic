@@ -153,25 +153,25 @@ void WorkerManager::addEmp()
 	}
 }
 
-//��������
+//保存数据
 void WorkerManager::save()
 {
-	//�����ļ������
+	//写操作
 	ofstream ofs;
-	//������ķ�ʽ���ļ�����д�ļ�
+	
 	ofs.open(FILENAME, ios::out);
-	//д�ļ�
+	
 	for (int i = 0; i < this->m_Empnum; i++)
 	{
 		ofs << this->m_EmpArray[i]->m_Id << "\t"
 			<< this->m_EmpArray[i]->m_Name << "\t"
 			<< this->m_EmpArray[i]->m_Did << endl;
 	}
-	//�ر��ļ�
+	
 	ofs.close();
 }
 
-//��ȡ�ļ��е����ݸ���
+
 int WorkerManager::getFileEmpNum()
 {
 	ifstream ifs;
@@ -187,7 +187,6 @@ int WorkerManager::getFileEmpNum()
 	return num;
 }
 
-//���ļ���Ϊ��ʱ�ĳ�ʼ������
 void WorkerManager::initEmp()
 {
 	ifstream ifs;
@@ -217,7 +216,6 @@ void WorkerManager::initEmp()
 	ifs.close();
 }
 
-//2.��ʾְ��
 void WorkerManager::showEmp()
 {
 	if (m_FileIsEmpty == 1||m_Empnum == 0)
@@ -228,7 +226,6 @@ void WorkerManager::showEmp()
 	{
 		for (int i = 0; i < this->m_Empnum; i++)
 		{
-			//���ö�̬���ְ����Ϣ
 			this->m_EmpArray[i]->showInfo();
 		}
 	}
@@ -279,7 +276,15 @@ void WorkerManager::deleteEmp(){
 	
 }
 
-//��������
+void WorkerManager::modifyEmp(){
+	int id;
+	cout<<"请输入要删除的职工编号:"<<endl;
+	cin>>id;
+	int index = this->empIsExist(id);
+	cout<<"请输入修改的内容:"<<endl;
+
+}
+
 WorkerManager::~WorkerManager()
 {
 	if (m_EmpArray != NULL)

@@ -35,7 +35,7 @@ public:
 	int empIsExist(int index);
 
 	//4.修改职工
-	//void modifyEmp();
+	void modifyEmp();
 
 	//5.查找职工
 	//void findEmp();
@@ -54,7 +54,7 @@ public:
 	//初始化
 	void initEmp();
 
-	//��������
+	//析构函数
 	~WorkerManager();
 
 public:
