@@ -16,53 +16,53 @@ public:
 	//
 	WorkerManager();
 
-	//�˵�չʾ����
+	//显示菜单
 	void showMenu();
 
-	//0.�˳�ϵͳ
+	//0.退出菜单
 	void exitSystem();
 
-	//1.����ְ��
+	//1.添加职工
 	void addEmp();
 
-	//2.��ʾְ��
+	//2.显示职工
 	void showEmp();
 
-	//3.ɾ��ְ��
+	//3.删除职工
 	void deleteEmp();
 
 
 	int empIsExist(int index);
 
-	//4.�޸�ְ��
+	//4.修改职工
 	//void modifyEmp();
 
-	//5.����ְ��
+	//5.查找职工
 	//void findEmp();
 
-	//6.���ձ����������&����
+	//6.排序职工
 	//void sortEmp();
 
-	//7.���ְ��
+	//7.清空数据
 	//void clearEmp();
-	//��������
+	//保存数据
 	void save();
 
-	//��ȡ�ļ��е����ݸ���
+	//获取职工数量
 	int getFileEmpNum();
 
-	//���ļ���Ϊ��ʱ�ĳ�ʼ������
+	//初始化
 	void initEmp();
 
 	//��������
 	~WorkerManager();
 
 public:
-	int m_Empnum; //ְ����
-	Worker ** m_EmpArray; //ְ������
+	int m_Empnum; //ְ职工人数
+	Worker ** m_EmpArray; //数组
 
 public:
-	bool m_FileIsEmpty; //�ж��ļ��Ƿ�Ϊ��
+	bool m_FileIsEmpty; //文件是否为空
 };
 
 #endif
