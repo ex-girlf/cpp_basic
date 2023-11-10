@@ -50,6 +50,21 @@ public:
 
    }
 
+   void Push_back(const T & val){
+        if(this->m_Capacity == this->m_Size){
+            return;
+        }
+        this->pAddress[this->m_Size] = val;
+        this->m_Size ++;
+
+   }
+
+    void Pop_back(){
+        if(this->m_Size == 0){
+            return;
+        }
+        this->m_Size--;
+    }
     
     //析构函数
     ~Myarray(){
